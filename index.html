@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Light My Screen</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Srikanth Manda">
+	<meta name="description" content="A simple webpage with background colour of your choice.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#778899">
+	<link rel="canonical" href="https://srikanthmanda.com/light-my-screen/">
+	<link rel="manifest" href="manifest.json">
+	<link rel="icon" href="icons/lightmyscreen.png" type="image/png">
+	<link rel="apple-touch-icon" href="icons/lightmyscreen.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="module" src="index.js"></script>
+</head>
+<body>
+	<footer>
+		<div id="input_controls">
+			<label for="colour_picker">Pick a colour:</label>
+			<input name="colour_picker" id="colour_picker" type="color" autofocus>
+		</div>
+	</footer>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service_worker.js')
+			.then(
+				onFulfillment => console.log("Service Worker registered", onFulfillment),
+				onRejection => console.log("Service Worker registration failed", onRejection)
+			);
+		} else {
+			console.log("Service Worker not supported");
+		}
+	</script>
+</body>
+</html>

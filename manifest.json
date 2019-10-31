@@ -1,0 +1,16 @@
+{
+	"short_name": "Light My Screen",
+	"name": "Light My Screen",
+	"icons": [
+		{
+			"src": "icons/lightmyscreen.png",
+			"type": "image/png",
+			"sizes": "1024x1024"
+		}
+	],
+	"start_url": "./index.html",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "./",
+	"theme_color": "#778899"
+}
